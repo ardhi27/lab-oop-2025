@@ -2,7 +2,7 @@ public class TokoSaya {
     int id;
     String nama;
     int stok;
-    int harga;
+    double harga;
 
     public void setId(int id){
         this.id = id;
@@ -28,11 +28,11 @@ public class TokoSaya {
         return stok;
     }
 
-    public void setHarga(int harga){
+    public void setHarga(double harga){
         this.harga = harga;
     }
 
-    public Integer getHarga(){
+    public Double getHarga(){
         return harga;
     }
 
@@ -57,6 +57,8 @@ public class TokoSaya {
     public static void main(String[] args){
         TokoSaya produk1 = new TokoSaya();
         TokoSaya produk2 = new TokoSaya();
+        TokoSaya produk3 = new TokoSaya();
+
 
         System.out.println("========= Barang 1 =========");
         produk1.setNama("Ayam");
@@ -70,6 +72,15 @@ public class TokoSaya {
         produk2.setNama("Sapi");
         produk2.setId(1);
         produk2.setHarga(8000000);
+        produk2.setStok(0);
+        produk2.tampilkanProduk();
+        produk2.cekBarang();
+        
+        
+        System.out.println("========= Barang 3 =========");
+        produk2.setNama("Sapi2");
+        produk2.setId(1);
+        produk2.setHarga(82000.1023);
         produk2.setStok(0);
         produk2.tampilkanProduk();
         produk2.cekBarang();

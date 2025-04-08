@@ -11,9 +11,9 @@ class Cuboid {
 public class Main{
     public static void main(String[] args){
         Cuboid cuboid = new Cuboid();
-        cuboid.height = 2;
-        cuboid.widht = 4;
-        cuboid.length = 6;
+        cuboid.height = 30;
+        cuboid.widht = 30;
+        cuboid.length = 50;
         System.out.printf("Volume = %.2f", cuboid.getVolume());
     }
 }
