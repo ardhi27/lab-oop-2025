@@ -13,7 +13,7 @@ public class Main{
         Cuboid cuboid = new Cuboid();
         cuboid.height = 30;
         cuboid.widht = 30;
-        cuboid.length = 50;
+        cuboid.length = 50   ;
         System.out.printf("Volume = %.2f", cuboid.getVolume());
     }
 }
