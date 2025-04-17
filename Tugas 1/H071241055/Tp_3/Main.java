@@ -1,45 +1,32 @@
 public class Main {
     public static void main(String[] args) {
-        Sepatu sepatuLariPro = new Sepatu("Sepatu Lari Pro", 15);
-        Sepatu sepatuCepat = new Sepatu("Sepatu Cepat", 20);
-        Sepatu sepatuSuper = new Sepatu("Sepatu Super", 25);
-        Sepatu sepatuBiasa = new Sepatu("Sepatu Biasa", 5);
+        Shoe proRunningShoe = new Shoe("Pro Running Shoe", 15);
+        Shoe fastShoe = new Shoe("Fast Shoe", 20);
+        Shoe superShoe = new Shoe("Super Shoe", 25);
+        Shoe regularShoe = new Shoe("Regular Shoe", 5);
 
-        Pelari pelariA1 = new Pelari("Budi", 12, sepatuLariPro);
-        Pelari pelariA2 = new Pelari("Ani", 14, sepatuCepat);
+        Runner runnerA1 = new Runner("Budi", 12, proRunningShoe);
+        Runner runnerA2 = new Runner("Ani", 14, fastShoe);
 
-        Pelari pelariB1 = new Pelari("Dedi", 10, sepatuSuper);
-        Pelari pelariB2 = new Pelari("Cici", 13, sepatuBiasa);
+        Runner runnerB1 = new Runner("Dedi", 10, superShoe);
+        Runner runnerB2 = new Runner("Cici", 13, regularShoe);
 
-        Tim timA = new Tim("Tim A", pelariA1, pelariA2);
-        Tim timB = new Tim("Tim B", pelariB1, pelariB2);
+        Team teamA = new Team("Team A", runnerA1, runnerA2);
+        Team teamB = new Team("Team B", runnerB1, runnerB2);
 
-        System.out.println("\n=== Stage 1 : Status Awal ===");
-        timA.munculkanStatusTim();
-        timB.munculkanStatusTim();
+        System.out.println("\n=== Stage 1 : Initial Status ===");
+        teamA.showTeamStatus();
+        teamB.showTeamStatus();
 
-        System.out.println("\n=== Stage 2 : Tukar sepatu antar anggoota tim ===");
-        timA.tukarSepatuAntarAnggota();
-        timB.tukarSepatuAntarAnggota();
+        System.out.println("\n=== Stage 2 : Exchange shoes between team members ===");
+        teamA.exchangeShoesBetweenMembers();
+        teamB.exchangeShoesBetweenMembers();
 
-        System.out.println("\n=== Stage 3 : Status setelah tukar sepatu ===");
-        timA.munculkanStatusTim();
-        timB.munculkanStatusTim();
+        System.out.println("\n=== Stage 3 : Status after shoe exchange ===");
+        teamA.showTeamStatus();
+        teamB.showTeamStatus();
 
-        System.out.println("\n=== Stage 4 : Hasil Perolehan ===");
-        int skorTimA = timA.getSkorTim();
-        int skorTimB = timB.getSkorTim();
-
-        System.out.println("skor " + timA.namaTim + ": " + skorTimA);
-        System.out.println("skor " + timB.namaTim + ": " + skorTimB);
-
-        if (skorTimA > skorTimB) {
-            System.out.println(timA.namaTim + " adalah pemenangnya");
-        } else if (skorTimB > skorTimA) {
-            System.out.println(timB.namaTim + " adalah pemenangnya");
-        } else {
-            System.out.println("Hasil seri");
-        }
-
+        System.out.println("\n=== Stage 4 : Final Score ===");
+        Team.showWinner(teamA,teamB);
     }
 }
