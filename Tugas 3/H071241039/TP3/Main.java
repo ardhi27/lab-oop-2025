@@ -8,21 +8,22 @@ public class Main {
         User user2 = new User("Gbrielmttl", "toti", song2);
         User user3 = new User("whoiss4b", "Shabong", song3);
 
-        PlaySong aktivitas1 = new PlaySong(user1, song1, "22:10");
-        aktivitas1.tampilkanAktivitas();
+        PlaySong activity1 = new PlaySong(user1, song1, "22:10");
+        activity1.displayActivity();
         System.out.println("=================================================");
-        PlaySong aktivitas2 = new PlaySong(user2, song2, "20:48");
-        aktivitas2.tampilkanAktivitas();
-        PlaySong aktivitas3 = new PlaySong(user3, song3, "7:50");
-        aktivitas3.tampilkanAktivitas();
+        
+        PlaySong activity2 = new PlaySong(user2, song2, "20:48");
+        activity2.displayActivity();
+        
+        PlaySong activity3 = new PlaySong(user3, song3, "7:50");
+        activity3.displayActivity();
 
         System.out.println("=================================================");
         
-        user2.tampilkanDurasi();
-        user1.tampilkanDurasi();
+        user2.displayDuration();
+        user1.displayDuration();
 
-        user1.bagikanLagu(user2);
-        user2.terimaLagu(song1);
-
+        user1.shareSong(user2);
+        user2.receiveSong(song1);
     }
 }

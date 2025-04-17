@@ -1,17 +1,17 @@
 public class Song {
-    String judul;
-    String penyanyi;
-    int durasiDetik;
+    String title;
+    String singer;
+    int durationInSeconds;
 
     public Song() {
-        this.judul = "Judul Tidak Diketahui";
-        this.penyanyi = "Penyanyi Tidak Diketahui";
-        this.durasiDetik = 0;
+        this.title = "Unknown Title";
+        this.singer = "Unknown Singer";
+        this.durationInSeconds = 0;
     }
 
-    public Song(String judul, String penyanyi, int durasiDetik) {
-        this.judul = judul;
-        this.penyanyi = penyanyi;
-        this.durasiDetik = durasiDetik;
+    public Song(String title, String singer, int durationInSeconds) {
+        this.title = title;
+        this.singer = singer;
+        this.durationInSeconds = durationInSeconds;
     }
 }
